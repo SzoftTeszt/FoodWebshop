@@ -1,1 +1,17 @@
-<p>products works!</p>
+<!-- {{products|json}} -->
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    <div *ngFor="let termek of products" class="col">
+      <div class="card h-100">
+        <img [src]="termek.kep" class="card-img-top" alt="termék">
+        <div class="card-body">
+          <h5 class="card-title">Termék</h5>
+          <p class="card-text">{{termek.leiras}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Ár: {{termek.ar}}Ft</small>
+        </div>
+      </div>
+    </div>
+    
+  </div>

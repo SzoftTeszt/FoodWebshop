@@ -9,6 +9,8 @@ import { CartComponent } from './cart/cart.component';
 import { ProductsComponent } from './products/products.component';
 import { ErrorComponent } from './error/error.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
