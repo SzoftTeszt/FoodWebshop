@@ -7,9 +7,17 @@
         <div class="card-body">
           <h5 class="card-title">Termék</h5>
           <p class="card-text">{{termek.leiras}}</p>
+         
         </div>
         <div class="card-footer">
-          <small class="text-muted">Ár: {{termek.ar}}Ft</small>
+          <small class="text-muted">
+            <div class="row">
+                <div class="col">Ár: {{termek.ar}}Ft</div>
+                <div (click)="addProduct(termek)" class="col"><i class="bi bi-cart2"></i></div>
+            </div>
+            
+             
+            </small>
         </div>
       </div>
     </div>
